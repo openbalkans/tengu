@@ -11,11 +11,16 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = [
+        'flask-sqlalchemy',
+        'flask'
+    ]
 
-setup_requirements = [ ]
+setup_requirements = []
 
-test_requirements = [ ]
+test_requirements = [
+        'tox',
+    ]
 
 setup(
     author="Barak Avrahami",
@@ -43,6 +48,11 @@ setup(
     packages=find_packages(include=['tengu']),
     setup_requires=setup_requirements,
     test_suite='tests',
+    entry_points={
+        'console_scripts': [
+            'tengu=tengu.cli:main_entrypoint'
+            ]
+        },
     tests_require=test_requirements,
     url='https://github.com/andecy64/tengu',
     version='0.1.0',
