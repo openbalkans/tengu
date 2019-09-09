@@ -3,13 +3,11 @@ import os
 
 class FlaskDevelopmentConfig:
     ENV_NAME = 'dev'
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
-
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
 
 class FlaskTestingConfig:
     ENV_NAME = 'test'
     SQLALCHEMY_DATABASE_URI = 'sqlite://'
-
 
 def get_config_by_env(env):
 

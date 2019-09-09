@@ -1,9 +1,15 @@
 import argparse
 from .app import get_app
 
-def main(port):
+def main(port, init_db=False):
+
     app = get_app()
-    app.run(port=port)
+
+    if init_db:
+        from .models import db
+        db.create_all()
+
+    app.run(port=port, host='0.0.0.0')
 
 
 def main_entrypoint():
@@ -14,8 +20,4 @@ def main_entrypoint():
                         dest='init_db')
     args = parser.parse_args()
 
-    if args.init_db:
-        from .models import db
-        db.create_all()
-
-    main(port=args.port)
+    main(port=args.port, init_db=args.init_db)
