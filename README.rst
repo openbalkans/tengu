@@ -26,8 +26,6 @@ Tengu is an OpenBalkans node implementation
 Features
 --------
 
-* TODO
-
 Credits
 -------
 
