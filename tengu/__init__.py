@@ -17,9 +17,9 @@ app = get_app()
 def page_view_log_count():
     client = boto3.client(
             'cloudwatch',
-            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
-            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
-            aws_region=os.environ['AWS_REGION'],
+            aws_access_key_id=app.config['access_key'],
+            aws_secret_access_key=app.config['secret_key'],
+            aws_region=app.config['aws_region'],
             )
 
     response = client.put_metric_data(

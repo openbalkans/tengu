@@ -1,7 +1,7 @@
 import json
 import socket
 from flask import Blueprint, request
-from . import page_view_log_count
+from tengu import page_view_log_count
 
 
 

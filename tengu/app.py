@@ -11,6 +11,7 @@ def get_aws_keys():
                 token=os.environ['VAULT_TOKEN'],
                 )
     creds = client.read('aws/creds/{}'.format(os.environ['VAULT_ROLE']))
+    creds.update({'aws_region': 'us-east-1'})
     return {k: v for k, v in creds['data'] if 'key' in k}
 
 
