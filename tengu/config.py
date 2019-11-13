@@ -1,4 +1,5 @@
 import os
+from fluentmetrics import FluentMetric
 
 
 class FlaskDevelopmentConfig:
@@ -19,3 +20,6 @@ def get_config_by_env(env):
     envs_dict = {e.ENV_NAME: e for e in envs}
 
     return envs_dict[env]
+
+def get_cloudwatch_logger():
+    return FluentMetric().with_namespace('Application/Tengu')
