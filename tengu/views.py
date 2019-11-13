@@ -1,15 +1,14 @@
 import json
 import socket
 from flask import Blueprint, request
-from .config import get_cloudwatch_logger
+from . import page_view_log_count
 
 
-cloudwatch_logger = get_cloudwatch_logger()
 
 obx = Blueprint('obx', __name__)
 
 
 @obx.route('/')
 def root_view():
-    cloudwatch_logger.log(MetricName='ViewCount', value='1', Unit='Count')
+    page_view_log_count()
     return 'Hello World ' + socket.gethostname()
