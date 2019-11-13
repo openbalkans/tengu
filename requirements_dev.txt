@@ -12,3 +12,4 @@ twine==1.12.1
 cloudwatch-fluent-metrics
 hvac
 boto3
+arrow
