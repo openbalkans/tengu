@@ -1,6 +1,6 @@
 import os
 from .factory import FlaskFactory
-from .views import obx
+#from .views import obx
 from .models import db
 
 
@@ -18,12 +18,12 @@ def get_aws_keys():
 def get_app():
     factory = FlaskFactory()
     
-    blueprint_dicts = [
-            dict(
-                bp=obx,
-            )
-        ]
+#     blueprint_dicts = [
+#             dict(
+#                 bp=obx,
+#             )
+#         ]
     
-    app = factory.initiallize_flask(db, blueprint_dicts)
+    app = factory.initiallize_flask(db)  # , blueprint_dicts)
     app.config.update(get_aws_keys())
     return app
