@@ -16,7 +16,8 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
         'flask-sqlalchemy',
-        'flask'
+        'flask',
+        'schedule',
     ]
 
 setup_requirements = []
