@@ -6,7 +6,7 @@
 
 import unittest
 
-from tengu import tengu
+from tengu import app
 
 
 class TestTengu(unittest.TestCase):
