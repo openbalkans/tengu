@@ -7,7 +7,7 @@ from .models import db
 def get_aws_keys():
     import hvac
     client = hvac.Client(
-                url=os.environ['VAULT_ADDR'],
+                url=os.environ.get('VAULT_ADDR', 'http://localhost:8200'),
                 token=os.environ['VAULT_TOKEN'],
                 )
     creds = client.read('aws/creds/{}'.format(os.environ['VAULT_ROLE']))
