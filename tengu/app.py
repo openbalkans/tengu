@@ -16,7 +16,7 @@ def get_aws_keys():
         'access_key': os.environ.get('AWS_ACCESS_KEY_ID'),
         'secret_key': os.environ.get('AWS_SECRET_ACCESS_KEY')
         }
-    return {k: v for k, v in creds['data'].items() if 'key' in k}
+    return creds
 
 
 def get_app():
