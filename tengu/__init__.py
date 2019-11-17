@@ -9,6 +9,6 @@ from .app import get_app
 
 __author__ = """Barak Avrahami"""
 __email__ = 'barak1345@gmail.com'
-__version__ = '0.1.12'
+__version__ = '0.1.13'
 
 app = get_app()
