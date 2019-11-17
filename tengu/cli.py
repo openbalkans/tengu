@@ -1,9 +1,7 @@
 import argparse
-from .app import get_app
+from .views import app
 
 def main(port, init_db=False):
-
-    app = get_app()
 
     if init_db:
         from .models import db

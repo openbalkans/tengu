@@ -13,7 +13,6 @@ def page_view_log_count():
             'cloudwatch',
             aws_access_key_id=app.config['access_key'],
             aws_secret_access_key=app.config['secret_key'],
-            aws_region=app.config['aws_region'],
             )
 
     response = client.put_metric_data(
