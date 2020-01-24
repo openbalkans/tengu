@@ -6,8 +6,8 @@ Tengu
 .. image:: https://img.shields.io/pypi/v/tengu.svg
         :target: https://pypi.python.org/pypi/tengu
 
-.. image:: https://img.shields.io/travis/andecy64/tengu.svg
-        :target: https://travis-ci.org/andecy64/tengu
+.. image:: https://img.shields.io/github/workflow/status/coregen/tengu/Unit%20tests
+        :target: https://github.com/coregen/tengu/actions?query=workflow%3A%22Unit+tests%22
 
 .. image:: https://readthedocs.org/projects/tengu/badge/?version=latest
         :target: https://tengu.readthedocs.io/en/latest/?badge=latest
