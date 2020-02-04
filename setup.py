@@ -58,7 +58,7 @@ setup(
             ]
         },
     tests_require=test_requirements,
-    url='https://github.com/andecy64/tengu',
+    url='https://github.com/openbalkans/tengu',
     version=version,
     zip_safe=False,
 )
