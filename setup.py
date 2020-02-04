@@ -18,7 +18,6 @@ requirements = [
         'flask-sqlalchemy',
         'flask',
         'schedule',
-        'hvac',
     ]
 
 setup_requirements = []
