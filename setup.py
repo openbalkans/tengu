@@ -4,9 +4,8 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
-import tengu
 
-version = tengu.__version__
+from tengu import __version__ as version
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
