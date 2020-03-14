@@ -18,6 +18,8 @@ requirements = [
         'flask-sqlalchemy',
         'flask',
         'schedule',
+        'uvicorn',
+        'fastapi',
     ]
 
 setup_requirements = []
