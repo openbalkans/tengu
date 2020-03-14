@@ -54,7 +54,8 @@ setup(
     test_suite='tests',
     entry_points={
         'console_scripts': [
-            'tengu=tengu.cli:main_entrypoint'
+            'tengu-flask=tengu.cli:main_entrypoint',
+            'tengu-fastapi=tengu.cli:fastapi_ep',
             ]
         },
     tests_require=test_requirements,

@@ -19,3 +19,8 @@ def main_entrypoint():
     args = parser.parse_args()
 
     main(port=args.port, init_db=args.init_db)
+
+def fastapi_ep():
+    import uvicorn
+    from .backend import app
+    uvicorn.run(app, host='127.0.0.1', port=8000)
